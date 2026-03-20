@@ -13,7 +13,7 @@ Open [http://localhost:3000](http://localhost:3000).
 
 ## Data
 
-Apps live in `src/data/apps.json`. Each entry includes `id`, `name`, `slug`, descriptions, `logo_url`, `screenshots`, `tags`, `pricing`, `platforms`, `links`, `release_date`, and optional `why_exists`.
+Apps live in `src/data/apps.json`. Each entry includes `id`, `name`, `slug`, descriptions, `logo_url`, `screenshots`, `tags`, `pricing`, `platforms`, `links`, `release_date`, and optional `why_exists` and `privacy_policy` (renders `/apps/[slug]/privacidad` and shows a “Política de privacidad” link on the app page).
 
 ## Comentarios en la ficha de cada app
 

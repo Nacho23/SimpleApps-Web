@@ -2,6 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
+import { AppLogoImage } from "@/components/AppLogoImage";
 import { getAllSlugs, getAppBySlug } from "@/lib/apps";
 import { AppCommentsSection } from "@/components/AppCommentsSection";
 import {
@@ -80,14 +81,12 @@ export default async function AppDetailPage({ params }: Props) {
       <header className="relative mt-10 overflow-hidden rounded-3xl border border-slate-200/80 bg-white/70 p-6 shadow-xl shadow-slate-900/[0.05] ring-1 ring-white/60 backdrop-blur-md dark:border-slate-800/80 dark:bg-slate-900/60 dark:shadow-black/40 dark:ring-slate-800/50 sm:p-8">
         <div className="pointer-events-none absolute -right-16 top-0 h-40 w-40 rounded-full bg-primary/10 blur-3xl dark:bg-primary/20" />
         <div className="relative flex flex-col gap-8 sm:flex-row sm:items-start">
-          <div className="relative mx-auto h-28 w-28 shrink-0 overflow-hidden rounded-2xl bg-slate-100 shadow-lg ring-4 ring-white dark:bg-slate-800 dark:ring-slate-700 sm:mx-0">
-            <Image
+          <div className="relative mx-auto h-28 w-28 shrink-0 overflow-hidden rounded-2xl sm:mx-0">
+            <AppLogoImage
               src={app.logo_url}
               alt={`Logotipo de ${app.name}`}
-              fill
               sizes="112px"
               priority
-              className="object-cover"
             />
           </div>
           <div className="min-w-0 flex-1 text-center sm:text-left">
@@ -100,7 +99,7 @@ export default async function AppDetailPage({ params }: Props) {
             <p className="mt-3 text-base font-medium leading-snug text-slate-800 dark:text-slate-200 sm:text-lg">
               {app.description_short}
             </p>
-            <p className="mt-4 text-lg leading-relaxed text-slate-600 dark:text-slate-400">
+            <p className="mt-4 whitespace-pre-line text-lg leading-relaxed text-slate-600 dark:text-slate-400">
               {app.description_long}
             </p>
           </div>
@@ -216,6 +215,14 @@ export default async function AppDetailPage({ params }: Props) {
             >
               Consíguela en Google Play
             </a>
+          )}
+          {app.privacy_policy && (
+            <Link
+              href={`/apps/${app.slug}/privacidad`}
+              className="inline-flex flex-1 items-center justify-center rounded-2xl border border-slate-200/90 bg-slate-50/80 px-6 py-3.5 text-sm font-bold text-slate-700 shadow-sm transition hover:border-primary/25 hover:bg-white hover:text-primary dark:border-slate-600 dark:bg-slate-800/60 dark:text-slate-200 dark:hover:border-sky-500/40 dark:hover:bg-slate-800 dark:hover:text-sky-300"
+            >
+              Política de privacidad
+            </Link>
           )}
         </div>
       </section>

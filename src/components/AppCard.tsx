@@ -1,6 +1,6 @@
-import Image from "next/image";
 import Link from "next/link";
 import type { MobileApp } from "@/types/app";
+import { AppLogoImage } from "./AppLogoImage";
 import { PricingBadge } from "./PricingBadge";
 
 type Props = {
@@ -34,14 +34,13 @@ export function AppCard({ app, featured = false }: Props) {
       <div className={`relative flex flex-1 flex-col ${gap} ${padding}`}>
         <div className="flex items-start justify-between gap-3">
           <div
-            className={`relative ${logoSize} shrink-0 overflow-hidden rounded-2xl bg-slate-100 shadow-inner ring-2 ring-white dark:bg-slate-800 dark:ring-slate-700`}
+            className={`relative ${logoSize} shrink-0 overflow-hidden rounded-2xl`}
           >
-            <Image
+            <AppLogoImage
               src={app.logo_url}
               alt={`Logotipo de ${app.name}`}
-              fill
               sizes={imageSizes}
-              className="object-cover transition duration-300 group-hover:scale-105"
+              className="transition duration-300 group-hover:scale-105"
             />
           </div>
           <PricingBadge pricing={app.pricing} />

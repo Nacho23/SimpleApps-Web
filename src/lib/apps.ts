@@ -15,6 +15,10 @@ export function getAllSlugs(): string[] {
   return apps.map((a) => a.slug);
 }
 
+export function getSlugsWithPrivacyPolicy(): string[] {
+  return apps.filter((a) => a.privacy_policy).map((a) => a.slug);
+}
+
 export function collectTags(list: MobileApp[]): string[] {
   const set = new Set<string>();
   for (const app of list) {

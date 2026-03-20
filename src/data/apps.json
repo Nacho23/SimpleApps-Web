@@ -18,6 +18,134 @@
       "app_store": "https://apps.apple.com/cl/app/zplit/id6759069892"
     },
     "release_date": "2026-03-01",
-    "why_exists": "Repartir gastos en grupo suele ser incómodo. Queríamos algo rápido, transparente y con IA para proponer un reparto justo que luego puedes afinar tú."
+    "why_exists": "Repartir gastos en grupo suele ser incómodo. Queríamos algo rápido, transparente y con IA para proponer un reparto justo que luego puedes afinar tú.",
+    "privacy_policy": {
+      "updated_at": "2026-02-16",
+      "sections": [
+        {
+          "title": "Zplit",
+          "paragraphs": [
+            "Dividir cuentas nunca fue tan fácil.",
+            "En Zplit (en adelante, \"la Aplicación\"), nos tomamos muy en serio tu privacidad. Esta Política de Privacidad describe cómo recopilamos, usamos y protegemos tu información cuando utilizas nuestra aplicación móvil."
+          ]
+        },
+        {
+          "title": "1. Información que recopilamos",
+          "paragraphs": [
+            "1.1. Imágenes y datos de boletas. Para funcionar, Zplit requiere acceso a tu cámara y galería de fotos.",
+            "Imágenes: cuando capturas o seleccionas una foto de una boleta, la imagen se procesa temporalmente para extraer la información.",
+            "Datos extraídos: extraemos ítems, precios, nombres de comercios, fechas y montos totales. Estos datos se utilizan exclusivamente para permitirte dividir la cuenta con otros participantes.",
+            "1.2. Información del dispositivo. Recopilamos un identificador de dispositivo anónimo para gestionar tus límites de uso de la inteligencia artificial (tokens) y mantener tus sesiones de forma anónima sin necesidad de que crees una cuenta con correo electrónico (por defecto).",
+            "1.3. Datos de uso. Podemos recopilar información básica sobre cómo interactúas con la aplicación (pantallas visitadas, errores técnicos) para mejorar la estabilidad y experiencia de usuario."
+          ]
+        },
+        {
+          "title": "2. Cómo usamos tu información",
+          "paragraphs": [
+            "Utilizamos la información recopilada para lo siguiente:",
+            "Procesamiento con IA: enviamos las imágenes de las boletas a proveedores de inteligencia artificial (como OpenAI, Google o Anthropic) para realizar el reconocimiento de texto (OCR) y la extracción de datos. Estas imágenes no se utilizan para entrenar modelos de IA de terceros bajo nuestras configuraciones de privacidad actuales.",
+            "Cálculos de cuenta: realizar los cálculos automáticos de propinas, descuentos y asignación de ítems entre participantes.",
+            "Sincronización: si decides registrar una cuenta permanente en el futuro, tus datos anónimos podrán vincularse a tu cuenta."
+          ]
+        },
+        {
+          "title": "3. Compartición de información",
+          "paragraphs": [
+            "No vendemos tus datos a terceros. Compartimos información solo en los siguientes casos:",
+            "Proveedores de IA: como se mencionó, los datos de las boletas se procesan a través de APIs de proveedores externos (OpenAI, Google o Anthropic) estrictamente para la extracción de datos.",
+            "Compartición por el usuario: la aplicación permite compartir el resumen de la cuenta a través de WhatsApp u otras aplicaciones de mensajería. Esto es una acción iniciada explícitamente por ti.",
+            "Servicios de backend: utilizamos Supabase para el almacenamiento de datos de configuración y límites de usuario."
+          ]
+        },
+        {
+          "title": "4. Pagos y compras in-app",
+          "paragraphs": [
+            "Zplit ofrece planes de pago para ampliar el uso de boletas. Los pagos se gestionan íntegramente a través de las tiendas de aplicaciones (Apple App Store y Google Play), utilizando sus respectivas bibliotecas y sistemas de facturación. No recopilamos ni almacenamos datos de tarjetas de pago ni información bancaria.",
+            "4.1. Planes disponibles. Productos consumibles (packs de boletas): pack de 25 boletas: 1,99 USD (una sola vez). Pack de 100 boletas: 4,99 USD (una sola vez). Suscripciones (boletas mensuales): suscripción mensual: 2,99 USD/mes — 80 boletas al mes. Suscripción anual: 19,99 USD/año — 80 boletas al mes.",
+            "4.2. Datos relacionados con pagos. Para validar tus compras y suscripciones, la aplicación puede recibir y almacenar de forma segura identificadores de transacción o de compra proporcionados por la tienda (App Store o Google Play). Estos datos se utilizan únicamente para verificar el estado de tu suscripción o el saldo de boletas y para restaurar compras en caso de reinstalación. El procesamiento del pago, la facturación y el cumplimiento de las políticas de cada tienda son responsabilidad exclusiva de Apple y Google."
+          ]
+        },
+        {
+          "title": "5. Almacenamiento y seguridad",
+          "paragraphs": [
+            "Almacenamiento local: utilizamos el almacenamiento del dispositivo (AsyncStorage) para guardar preferencias temporales.",
+            "Seguridad en la nube: los datos enviados a nuestro backend en Supabase están protegidos por medidas de seguridad de nivel industrial y reglas de acceso (RLS).",
+            "Retención: las imágenes procesadas no se almacenan permanentemente en nuestros servidores a menos que sea necesario para la funcionalidad solicitada por el usuario."
+          ]
+        },
+        {
+          "title": "6. Tus derechos",
+          "paragraphs": [
+            "Tienes derecho a:",
+            "Acceso y rectificación: puedes ver y editar los datos extraídos de las boletas antes de finalizar el resumen.",
+            "Eliminación: puedes eliminar la aplicación en cualquier momento, lo que eliminará los datos locales. Para solicitudes de eliminación de datos en el servidor vinculados a tu identificador de dispositivo, puedes contactarnos.",
+            "Control de permisos: puedes revocar el acceso a la cámara y fotos desde los ajustes de tu sistema operativo."
+          ]
+        },
+        {
+          "title": "7. Cambios a esta política",
+          "paragraphs": [
+            "Podemos actualizar nuestra Política de Privacidad periódicamente. Te notificaremos cualquier cambio publicando la nueva versión dentro de la aplicación."
+          ]
+        },
+        {
+          "title": "8. Contacto",
+          "paragraphs": [
+            "Si tienes preguntas sobre esta Política de Privacidad, puedes contactarnos a través del correo electrónico marcelotorres23.mt@gmail.com o de los canales oficiales proporcionados por el desarrollador en la tienda de aplicaciones.",
+            "© 2026 Zplit — Todos los derechos reservados."
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "id": "2",
+    "name": "CostoClaro",
+    "slug": "costoclaro",
+    "description_short": "Precio de venta en pesos chilenos: costo, margen e IVA. Para emprendedores y pymes.",
+    "description_long": "CostoClaro te ayuda a saber a cuánto vender sin perder plata: sumas tu costo (o tus insumos con cantidades), otros gastos, el margen que quieres ganar y si el precio lleva IVA 19% (Chile). Todo en pesos chilenos, con resultados fáciles de leer.\n\nIdeal si vendes productos hechos a mano, repostería, taller, belleza, comercio o servicios: puedes elegir cómo calculas el costo y el tipo de negocio para que los textos te resulten familiares.\n\nQué puedes hacer:\n• Calcular precio sugerido a partir del costo y el margen\n• Modo con varios materiales (precio por paquete y cantidad usada)\n• Incluir otros gastos (con sugerencia aproximada opcional)\n• Ver el precio con o sin redondeo a centenas\n• Limpiar la cotización para pasar a otro producto (sin borrar tu perfil de negocio)\n• Ajustar tipo de negocio cuando quieras\n\nLa configuración inicial y los cálculos se guardan en tu dispositivo para que puedas usar la app sin complicaciones.\n\nSi te gusta ir al grano con los números, CostoClaro es tu calculadora de precios del día a día.",
+    "logo_url": "/apps/costoClaro/logo.png",
+    "screenshots": [
+      "/apps/costoClaro/phone1.png",
+      "/apps/costoClaro/phone2.png",
+      "/apps/costoClaro/phone3.png"
+    ],
+    "tags": ["Finanzas", "Pymes"],
+    "pricing": "free",
+    "platforms": ["iOS"],
+    "links": {},
+    "release_date": "2026-03-20",
+    "why_exists": "Cotizar con costo real, margen e IVA en pesos chilenos suele dispersarse entre hojas y calculadoras. CostoClaro lo concentra en un flujo simple para emprendedores y pymes que quieren un precio de venta claro, sin vueltas.",
+    "privacy_policy": {
+      "updated_at": "2026-03-20",
+      "sections": [
+        {
+          "title": "CostoClaro",
+          "paragraphs": [
+            "Tu precio de venta, claro.",
+            "En CostoClaro nos importa que entiendas qué ocurre con la información cuando usas la aplicación. Esta política resume el tratamiento de datos de forma sencilla."
+          ]
+        },
+        {
+          "title": "Datos en tu dispositivo",
+          "paragraphs": [
+            "La configuración inicial y los cálculos se guardan en tu dispositivo para que puedas usar la app sin complicaciones. Así puedes trabajar cotizaciones y revisar números con los datos almacenados localmente en tu teléfono o tablet.",
+            "No vendemos tus datos personales. Si en el futuro la app incorporara sincronización en la nube, estadísticas u otros servicios, actualizaremos esta política y, cuando corresponda, lo indicaremos también dentro de la aplicación."
+          ]
+        },
+        {
+          "title": "Cambios",
+          "paragraphs": [
+            "Podemos actualizar esta Política de Privacidad. Publicaremos la versión vigente en esta página del catálogo SimpleApps y, cuando proceda, avisaremos dentro de la app."
+          ]
+        },
+        {
+          "title": "Contacto",
+          "paragraphs": [
+            "Si tienes preguntas sobre privacidad, puedes contactarnos a través de los canales oficiales del desarrollador en la App Store cuando la app esté publicada, o mediante el correo de contacto indicado en el pie de este sitio (SimpleApps), si está disponible."
+          ]
+        }
+      ]
+    }
   }
 ]
