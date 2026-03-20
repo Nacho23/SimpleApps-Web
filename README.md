@@ -1,36 +1,39 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# SimpleApps
 
-## Getting Started
+A small [Next.js](https://nextjs.org) (App Router) + [Tailwind CSS](https://tailwindcss.com) site that catalogs mobile apps: cards on the home page, detail pages with screenshots and store links, search, and tag filters.
 
-First, run the development server:
+## Run locally
 
 ```bash
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000).
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Data
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Apps live in `src/data/apps.json`. Each entry includes `id`, `name`, `slug`, descriptions, `logo_url`, `screenshots`, `tags`, `pricing`, `platforms`, `links`, `release_date`, and optional `why_exists`.
 
-## Learn More
+## Comentarios en la ficha de cada app
 
-To learn more about Next.js, take a look at the following resources:
+Los comentarios públicos se guardan en **Upstash Redis** (`UPSTASH_REDIS_REST_URL` y `UPSTASH_REDIS_REST_TOKEN`). Sin esas variables, el formulario ofrece envío por correo (`NEXT_PUBLIC_CONTACT_EMAIL`) o copiar al portapapeles.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Idea suggestions (form)
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+Set `NEXT_PUBLIC_CONTACT_EMAIL` in `.env.local` so the home-page form opens the user’s mail client with a pre-filled message. If unset, submit copies the text to the clipboard instead.
 
-## Deploy on Vercel
+## Theme
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Light / dark mode applies the Tailwind `dark` class on `<html>`. The root layout sets an initial class from the `simpleapps-theme` cookie and, when the browser sends it, `Sec-CH-Prefers-Color-Scheme` (via `middleware.ts` + `Accept-CH`). The client keeps `localStorage`, the DOM and the cookie in sync (`ThemeProvider`, `src/lib/theme.ts`). No theme `<script>` tags (React 19–friendly).
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## Deploy
+
+Works on [Vercel](https://vercel.com) or [Netlify](https://www.netlify.com) with the default Next.js adapter. Set `NEXT_PUBLIC_SITE_URL` to your production URL (e.g. `https://your-domain.com`) so Open Graph and `metadataBase` resolve correctly.
+
+## Scripts
+
+- `npm run dev` — development server
+- `npm run build` — production build
+- `npm run start` — run production server
+- `npm run lint` — ESLint

@@ -1,0 +1,23 @@
+[
+  {
+    "id": "1",
+    "name": "Zplit",
+    "slug": "zplit",
+    "description_short": "Divide cuentas en grupo con IA: reparto justo, revisa ítems y quién paga qué.",
+    "description_long": "Olvídate de las calculadoras y las discusiones. Zplit usa inteligencia artificial para dividir cualquier cuenta de forma justa y automática. Puedes revisar, editar y ajustar cada ítem antes de calcular quién paga qué. Pensada para salidas en grupo, viajes y cenas donde todos quieren claridad al instante. Compatible con iPhone e iPad (iOS 15.1 o posterior).",
+    "logo_url": "/apps/zplit/logo.png",
+    "screenshots": [
+      "/apps/zplit/page1.png",
+      "/apps/zplit/page2.png",
+      "/apps/zplit/page3.png"
+    ],
+    "tags": ["Productividad", "Finanzas"],
+    "pricing": "free",
+    "platforms": ["iOS"],
+    "links": {
+      "app_store": "https://apps.apple.com/cl/app/zplit/id6759069892"
+    },
+    "release_date": "2026-03-01",
+    "why_exists": "Repartir gastos en grupo suele ser incómodo. Queríamos algo rápido, transparente y con IA para proponer un reparto justo que luego puedes afinar tú."
+  }
+]
