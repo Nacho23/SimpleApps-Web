@@ -9,7 +9,7 @@ import {
   isCommentsStorageConfigured,
   listCommentsForSlug,
 } from "@/lib/app-comments";
-import { PricingBadge } from "@/components/PricingBadge";
+import { AiBadge } from "@/components/AiBadge";
 import type { MobileApp } from "@/types/app";
 
 type Props = { params: Promise<{ slug: string }> };
@@ -94,7 +94,7 @@ export default async function AppDetailPage({ params }: Props) {
               <h1 className="text-3xl font-extrabold tracking-tight text-slate-900 dark:text-white sm:text-4xl">
                 {app.name}
               </h1>
-              <PricingBadge pricing={app.pricing} />
+              {app.uses_ai ? <AiBadge /> : null}
             </div>
             <p className="mt-3 text-base font-medium leading-snug text-slate-800 dark:text-slate-200 sm:text-lg">
               {app.description_short}
@@ -138,23 +138,6 @@ export default async function AppDetailPage({ params }: Props) {
           Ficha de la app
         </h2>
         <dl className="mt-6 grid gap-6 sm:grid-cols-2">
-          <div className="rounded-2xl border border-slate-100 bg-slate-50/80 p-4 dark:border-slate-800 dark:bg-slate-950/50 sm:col-span-2">
-            <dt className="text-xs font-semibold uppercase tracking-wide text-slate-500 dark:text-slate-400">
-              Precio y compras
-            </dt>
-            <dd className="mt-3 space-y-2 text-slate-700 dark:text-slate-200">
-              <p className="text-lg font-semibold text-slate-900 dark:text-white">
-                Gratis
-              </p>
-              <p className="text-sm leading-relaxed">
-                Todas las apps de este catálogo son gratuitas. Si en el futuro
-                alguna ofreciera extras opcionales, serían compras{" "}
-                <strong>solo dentro de la app</strong> (App Store o Google Play),
-                nunca enlaces de pago externos ni cobros fuera de las tiendas
-                oficiales.
-              </p>
-            </dd>
-          </div>
           <div className="rounded-2xl border border-slate-100 bg-slate-50/80 p-4 dark:border-slate-800 dark:bg-slate-950/50">
             <dt className="text-xs font-semibold uppercase tracking-wide text-slate-500 dark:text-slate-400">
               Lanzamiento

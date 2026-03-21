@@ -13,6 +13,7 @@
     ],
     "tags": ["Productividad", "Finanzas"],
     "pricing": "free",
+    "uses_ai": true,
     "platforms": ["iOS"],
     "links": {
       "app_store": "https://apps.apple.com/cl/app/zplit/id6759069892"
@@ -143,6 +144,110 @@
           "title": "Contacto",
           "paragraphs": [
             "Si tienes preguntas sobre privacidad, puedes contactarnos a través de los canales oficiales del desarrollador en la App Store cuando la app esté publicada, o mediante el correo de contacto indicado en el pie de este sitio (SimpleApps), si está disponible."
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "id": "3",
+    "name": "GymTrackAI",
+    "slug": "gymtrackai",
+    "description_short": "Rutinas de entrenamiento con IA: planes a medida, clasificación de ejercicios y sugerencias según tu objetivo y equipo.",
+    "description_long": "GymTrackAI te ayuda a crear y gestionar rutinas de gimnasio con asistencia de IA (GPT-4 Turbo). Puedes armar rutinas a mano o seguir un asistente guiado por objetivo, duración, frecuencia, nivel y equipamiento. La app clasifica ejercicios personalizados (grupo muscular, dificultad, equipo, alternativas) y puede sugerir movimientos nuevos para tus rutinas.\n\nTú aportas tu propia clave de OpenAI (guardada de forma segura en el dispositivo) para las funciones de IA; la interfaz está en español y con tema oscuro. Stack: React Native (Expo), Zustand, Supabase y Expo Router.",
+    "logo_url": "/apps/GymTrackAI/logo.png",
+    "screenshots": [
+      "/apps/GymTrackAI/phone1.png",
+      "/apps/GymTrackAI/phon2.png",
+      "/apps/GymTrackAI/phone3.png"
+    ],
+    "tags": ["Salud", "Fitness"],
+    "pricing": "free",
+    "uses_ai": true,
+    "platforms": ["iOS", "Android", "Web"],
+    "links": {},
+    "release_date": "2026-03-20",
+    "why_exists": "Planificar rutinas coherentes con el tiempo y el material disponible cuesta; queríamos un flujo claro en español, con IA para generar y entender ejercicios sin perder el control de tus datos de API.",
+    "privacy_policy": {
+      "updated_at": "2026-03-20",
+      "sections": [
+        {
+          "title": "GymTrackAI",
+          "paragraphs": [
+            "Entrena con rutinas que puedes crear y refinar tú.",
+            "Esta política resume cómo GymTrackAI trata la información cuando usas la aplicación."
+          ]
+        },
+        {
+          "title": "Clave de OpenAI y dispositivo",
+          "paragraphs": [
+            "Las funciones de inteligencia artificial pueden requerir una clave de API de OpenAI que tú configuras en la app. Esa clave se almacena de forma segura en el dispositivo (por ejemplo mediante almacenamiento seguro del sistema/Expo Secure Store) y no se comparte entre usuarios.",
+            "Los prompts y datos necesarios para generar o clasificar rutinas y ejercicios se envían a los servicios de OpenAI según uses esas funciones. Revisa las políticas de OpenAI para el tratamiento de datos en sus APIs."
+          ]
+        },
+        {
+          "title": "Datos y backend",
+          "paragraphs": [
+            "La app puede usar Supabase u otros servicios para persistir rutinas y perfil, según la configuración del producto. Aplica el modelo de seguridad y privacidad de esos proveedores además de lo descrito aquí.",
+            "También puede usarse almacenamiento local en el dispositivo (por ejemplo AsyncStorage) para preferencias y datos de sesión."
+          ]
+        },
+        {
+          "title": "Cambios y contacto",
+          "paragraphs": [
+            "Podemos actualizar esta política; publicaremos la versión vigente en esta página del catálogo SimpleApps cuando corresponda.",
+            "Para dudas sobre privacidad, usa los canales oficiales del desarrollador en las tiendas cuando la app esté publicada, o el contacto indicado en el pie de este sitio (SimpleApps), si está disponible."
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "id": "4",
+    "name": "Lila",
+    "slug": "lila",
+    "description_short": "Anota tus gastos con calma. Todo en tu móvil, sin cuentas.",
+    "description_long": "Lila es una app para llevar tus gastos con la calma de un diario, no la presión de un banco. Anota lo que gastas en segundos, mira el mes en un vistazo (totales, torta por categoría y últimas entradas) y revisa mes a mes cómo se reparte tu dinero — sin cuentas, sin nube y sin ruido visual.\n\nPensada para quien quiere claridad sin complicarse: categorías sencillas, tema claro u oscuro, moneda configurable y exportación a CSV o PDF cuando quieras una copia. Tus datos viven solo en tu dispositivo.\n\nLila te ayuda a registrar gastos con importe, categoría, fecha y nota opcional. Ve el total del mes, un gráfico por categoría y un resumen mensual con barras y estadísticas. Sin registro ni internet obligatorio; exporta todo cuando lo necesites.",
+    "logo_url": "/apps/Lila/logo.png",
+    "screenshots": [
+      "/apps/Lila/iphone1.png",
+      "/apps/Lila/iphone2.png",
+      "/apps/Lila/iphone3.png"
+    ],
+    "tags": ["Finanzas", "Productividad"],
+    "pricing": "free",
+    "platforms": ["iOS"],
+    "links": {},
+    "release_date": "2026-03-20",
+    "why_exists": "Registrar gastos sin sentir que abres un home banking: queríamos un espacio tranquilo, sin nube ni cuentas, donde el dinero se entienda mes a mes sin ruido.",
+    "privacy_policy": {
+      "updated_at": "2026-03-20",
+      "sections": [
+        {
+          "title": "Lila",
+          "paragraphs": [
+            "Tus gastos, en tu móvil.",
+            "Lila está pensada para que tus datos de gastos permanezcan en tu dispositivo. Esta política resume el tratamiento de la información de forma sencilla."
+          ]
+        },
+        {
+          "title": "Datos locales y cuenta",
+          "paragraphs": [
+            "No necesitas crear cuenta para usar la app. La información que registras (importes, categorías, fechas, notas) se guarda localmente en tu teléfono o tablet.",
+            "Sin nube obligatoria: el enfoque es trabajar offline con tus datos en el dispositivo. Si en el futuro se ofreciera sincronización u otros servicios, se actualizará esta política y la app."
+          ]
+        },
+        {
+          "title": "Exportación",
+          "paragraphs": [
+            "Puedes exportar tus datos a CSV o PDF cuando quieras una copia. Esa exportación la inicias tú y eliges dónde guardarla o compartirla desde el sistema."
+          ]
+        },
+        {
+          "title": "Cambios y contacto",
+          "paragraphs": [
+            "Podemos actualizar esta Política de Privacidad; publicaremos la versión vigente en esta página del catálogo SimpleApps cuando corresponda.",
+            "Para dudas sobre privacidad, usa los canales oficiales del desarrollador en la App Store cuando la app esté publicada, o el contacto indicado en el pie de este sitio (SimpleApps), si está disponible."
           ]
         }
       ]

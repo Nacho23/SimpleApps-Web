@@ -1,7 +1,7 @@
 import Link from "next/link";
 import type { MobileApp } from "@/types/app";
+import { AiBadge } from "./AiBadge";
 import { AppLogoImage } from "./AppLogoImage";
-import { PricingBadge } from "./PricingBadge";
 
 type Props = {
   app: MobileApp;
@@ -43,7 +43,7 @@ export function AppCard({ app, featured = false }: Props) {
               className="transition duration-300 group-hover:scale-105"
             />
           </div>
-          <PricingBadge pricing={app.pricing} />
+          {app.uses_ai ? <AiBadge /> : null}
         </div>
 
         <div className="min-w-0 flex-1">

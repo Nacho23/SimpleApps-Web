@@ -33,6 +33,8 @@ export type MobileApp = {
   platforms: Platform[];
   links: AppLinks;
   release_date: string;
+  /** Incluye funciones de inteligencia artificial (muestra badge en el catálogo). */
+  uses_ai?: boolean;
   why_exists?: string;
   privacy_policy?: PrivacyPolicy;
 };
