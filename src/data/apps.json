@@ -164,7 +164,7 @@
     "tags": ["Salud", "Fitness"],
     "pricing": "free",
     "uses_ai": true,
-    "platforms": ["iOS", "Android", "Web"],
+    "platforms": ["iOS"],
     "links": {},
     "release_date": "2026-03-20",
     "why_exists": "Planificar rutinas coherentes con el tiempo y el material disponible cuesta; queríamos un flujo claro en español, con IA para generar y entender ejercicios sin perder el control de tus datos de API.",
@@ -217,7 +217,9 @@
     "tags": ["Finanzas", "Productividad"],
     "pricing": "free",
     "platforms": ["iOS"],
-    "links": {},
+    "links": {
+      "app_store": "https://apps.apple.com/cl/app/lila-gastos-simples/id6760924749"
+    },
     "release_date": "2026-03-20",
     "why_exists": "Registrar gastos sin sentir que abres un home banking: queríamos un espacio tranquilo, sin nube ni cuentas, donde el dinero se entienda mes a mes sin ruido.",
     "privacy_policy": {

@@ -1,7 +1,9 @@
 import Link from "next/link";
 import type { MobileApp } from "@/types/app";
+import { formatPlatformAvailability, hasStoreListing } from "@/lib/app-display";
 import { AiBadge } from "./AiBadge";
 import { AppLogoImage } from "./AppLogoImage";
+import { AppStatusBadge } from "./AppStatusBadge";
 
 type Props = {
   app: MobileApp;
@@ -23,6 +25,8 @@ export function AppCard({ app, featured = false }: Props) {
     : "text-sm sm:text-[15px] leading-relaxed";
   const imageSizes = featured ? "112px" : "96px";
   const rounded = featured ? "rounded-3xl" : "rounded-3xl";
+  const inProduction = hasStoreListing(app.links);
+  const platformLine = formatPlatformAvailability(app.platforms);
 
   return (
     <Link
@@ -43,7 +47,10 @@ export function AppCard({ app, featured = false }: Props) {
               className="transition duration-300 group-hover:scale-105"
             />
           </div>
-          {app.uses_ai ? <AiBadge /> : null}
+          <div className="flex max-w-[min(100%,12rem)] flex-shrink-0 flex-col items-end gap-1.5 sm:max-w-none sm:flex-row sm:flex-wrap sm:justify-end">
+            <AppStatusBadge inProduction={inProduction} />
+            {app.uses_ai ? <AiBadge /> : null}
+          </div>
         </div>
 
         <div className="min-w-0 flex-1">
@@ -52,6 +59,14 @@ export function AppCard({ app, featured = false }: Props) {
           >
             {app.name}
           </h2>
+          {platformLine ? (
+            <p
+              className="mt-1.5 text-[11px] font-medium tracking-wide text-slate-500 dark:text-slate-400"
+              title="Plataformas previstas o compatibles"
+            >
+              {platformLine}
+            </p>
+          ) : null}
           <p
             className={`mt-2 line-clamp-6 text-pretty text-slate-600 dark:text-slate-400 ${descClass}`}
           >

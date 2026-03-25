@@ -1,10 +1,13 @@
 import appsData from "@/data/apps.json";
+import { hasStoreListing } from "@/lib/app-display";
 import type { MobileApp } from "@/types/app";
 
 const apps = appsData as MobileApp[];
 
 export function getApps(): MobileApp[] {
-  return apps;
+  const inStores = apps.filter((a) => hasStoreListing(a.links));
+  const notInStores = apps.filter((a) => !hasStoreListing(a.links));
+  return [...inStores, ...notInStores];
 }
 
 export function getAppBySlug(slug: string): MobileApp | undefined {
