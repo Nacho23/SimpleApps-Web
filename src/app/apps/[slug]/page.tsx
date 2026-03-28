@@ -9,6 +9,8 @@ import {
   isCommentsStorageConfigured,
   listCommentsForSlug,
 } from "@/lib/app-comments";
+import { getContactEmail } from "@/lib/contact";
+import { ENV_VAR_NAMES } from "@/lib/env-names";
 import { AiBadge } from "@/components/AiBadge";
 import type { MobileApp } from "@/types/app";
 
@@ -215,6 +217,8 @@ export default async function AppDetailPage({ params }: Props) {
         appSlug={app.slug}
         initialComments={comments}
         storageConfigured={storageConfigured}
+        contactEmail={getContactEmail()}
+        envVarNames={ENV_VAR_NAMES}
       />
 
       {app.why_exists && (

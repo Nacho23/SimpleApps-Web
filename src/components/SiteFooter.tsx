@@ -1,7 +1,6 @@
-const contactEmail =
-  typeof process.env.NEXT_PUBLIC_CONTACT_EMAIL === "string"
-    ? process.env.NEXT_PUBLIC_CONTACT_EMAIL.trim()
-    : "";
+import { getContactEmail } from "@/lib/contact";
+
+const contactEmail = getContactEmail();
 
 export function SiteFooter() {
   return (

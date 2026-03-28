@@ -2,6 +2,7 @@
 
 import { type FormEvent, useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
+import type { EnvVarNames } from "@/lib/env-names";
 import type { AppComment, FeedbackKind } from "@/types/app-comment";
 
 const kindLabels: Record<FeedbackKind, string> = {
@@ -23,6 +24,8 @@ type Props = {
   appSlug: string;
   initialComments: AppComment[];
   storageConfigured: boolean;
+  contactEmail: string;
+  envVarNames: EnvVarNames;
 };
 
 function formatCommentDate(iso: string) {
@@ -37,6 +40,8 @@ export function AppCommentsSection({
   appSlug,
   initialComments,
   storageConfigured,
+  contactEmail,
+  envVarNames,
 }: Props) {
   const router = useRouter();
   const [kind, setKind] = useState<FeedbackKind>("mejora");
@@ -46,10 +51,7 @@ export function AppCommentsSection({
   const [feedback, setFeedback] = useState<string | null>(null);
   const [submitting, setSubmitting] = useState(false);
 
-  const contact =
-    typeof process.env.NEXT_PUBLIC_CONTACT_EMAIL === "string"
-      ? process.env.NEXT_PUBLIC_CONTACT_EMAIL.trim()
-      : "";
+  const contact = contactEmail;
 
   useEffect(() => {
     setFeedback(null);
@@ -116,11 +118,11 @@ export function AppCommentsSection({
     try {
       await navigator.clipboard.writeText(mailBody);
       setFeedback(
-        "Texto copiado al portapapeles. Pégalo en un correo y envíamelo. (Configura UPSTASH_REDIS_* para publicar aquí, o NEXT_PUBLIC_CONTACT_EMAIL para abrir el correo.)",
+        `Texto copiado al portapapeles. Pégalo en un correo y envíamelo. (Configura ${envVarNames.UPSTASH_REDIS_REST_URL} y ${envVarNames.UPSTASH_REDIS_REST_TOKEN} para publicar aquí, o ${envVarNames.NEXT_PUBLIC_CONTACT_EMAIL} para abrir el correo.)`,
       );
     } catch {
       setFeedback(
-        "Configura Upstash Redis para comentarios en la página, o NEXT_PUBLIC_CONTACT_EMAIL.",
+        `Configura Upstash Redis (${envVarNames.UPSTASH_REDIS_REST_URL}, ${envVarNames.UPSTASH_REDIS_REST_TOKEN}) para comentarios en la página, o ${envVarNames.NEXT_PUBLIC_CONTACT_EMAIL}.`,
       );
     }
   }
@@ -158,16 +160,16 @@ export function AppCommentsSection({
           </strong>{" "}
           configura{" "}
           <code className="rounded bg-white px-1 py-0.5 text-xs ring-1 ring-slate-200 dark:bg-slate-800 dark:ring-slate-600">
-            UPSTASH_REDIS_REST_URL
+            {envVarNames.UPSTASH_REDIS_REST_URL}
           </code>{" "}
           y{" "}
           <code className="rounded bg-white px-1 py-0.5 text-xs ring-1 ring-slate-200 dark:bg-slate-800 dark:ring-slate-600">
-            UPSTASH_REDIS_REST_TOKEN
+            {envVarNames.UPSTASH_REDIS_REST_TOKEN}
           </code>{" "}
           (cuenta gratuita en Upstash) para que los mensajes queden guardados
           aquí. Mientras tanto puedes enviar por correo si tienes{" "}
           <code className="rounded bg-white px-1 py-0.5 text-xs dark:bg-slate-800">
-            NEXT_PUBLIC_CONTACT_EMAIL
+            {envVarNames.NEXT_PUBLIC_CONTACT_EMAIL}
           </code>
           .
         </p>

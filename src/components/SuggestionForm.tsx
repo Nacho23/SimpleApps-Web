@@ -2,16 +2,15 @@
 
 import { type FormEvent, useState } from "react";
 
-export function SuggestionForm() {
+type Props = { contactEmail: string };
+
+export function SuggestionForm({ contactEmail }: Props) {
   const [idea, setIdea] = useState("");
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [feedback, setFeedback] = useState<string | null>(null);
 
-  const contact =
-    typeof process.env.NEXT_PUBLIC_CONTACT_EMAIL === "string"
-      ? process.env.NEXT_PUBLIC_CONTACT_EMAIL.trim()
-      : "";
+  const contact = contactEmail;
 
   async function handleSubmit(e: FormEvent) {
     e.preventDefault();

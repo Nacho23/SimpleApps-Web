@@ -1,6 +1,8 @@
 import { revalidatePath } from "next/cache";
 import { NextResponse } from "next/server";
 import { appendComment } from "@/lib/app-comments";
+
+export const runtime = "nodejs";
 import { getAppBySlug } from "@/lib/apps";
 import type { FeedbackKind } from "@/types/app-comment";
 

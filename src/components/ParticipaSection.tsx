@@ -1,7 +1,9 @@
+import { getContactEmail } from "@/lib/contact";
 import { SectionTitle } from "./SectionTitle";
 import { SuggestionForm } from "./SuggestionForm";
 
 export function ParticipaSection() {
+  const contactEmail = getContactEmail();
   return (
     <section className="mt-16 sm:mt-20">
       <SectionTitle
@@ -14,7 +16,7 @@ export function ParticipaSection() {
         necesitas. Leo todas las sugerencias y me ayudan a priorizar qué
         construir después.
       </p>
-      <SuggestionForm />
+      <SuggestionForm contactEmail={contactEmail} />
     </section>
   );
 }
