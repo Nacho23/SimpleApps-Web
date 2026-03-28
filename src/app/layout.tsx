@@ -6,6 +6,8 @@ import { SiteFooter } from "@/components/SiteFooter";
 import { SiteHeader } from "@/components/SiteHeader";
 import { ThemeProvider } from "@/components/ThemeProvider";
 import { readInitialDarkFromRequest, THEME_STORAGE_KEY } from "@/lib/theme";
+import { Analytics } from "@vercel/analytics/next"
+
 import "./globals.css";
 
 const geistSans = Geist({
@@ -63,6 +65,7 @@ export default async function RootLayout({
           <main className="relative flex-1">{children}</main>
           <SiteFooter />
         </ThemeProvider>
+        <Analytics />
       </body>
     </html>
   );
